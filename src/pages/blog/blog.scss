@@ -1,0 +1,74 @@
+@import "../../styles/style.scss";
+.blog {
+    @include themify() {
+        
+        .post {
+            padding: 30px 50px;
+            background-color: themed("bg");
+            display: flex;
+            justify-content: space-between;
+            .share-bar {
+                flex: 1;
+                position: relative;
+                .share-sheet {
+                    position: absolute;
+                    right: 0px;
+                    padding-right: 60px;
+                    padding-left: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    gap: 15px;
+
+                    .share-icon {
+                        background-color: themed("autofill");
+                        padding: 10px;
+                        border-radius: 5px;
+                        font-size: 17px;
+
+                        &:hover {
+                            background-color: #40ca85;
+                            transition: background-color 0.2s ease;
+                        }
+                    }
+                }
+            }
+            .content {
+                flex: 4;
+                padding: 0px 30px;
+                border-right: 1px solid themed("border");;
+            }
+            .author-section {
+                flex: 2;
+                padding-left: 30px;
+                .about-author {
+                    border-bottom: 1px solid themed("border");
+                    margin-bottom: 30px;
+                    padding-right: 50px;
+                    
+                    h4 {
+                        
+                    }
+                    img {
+                        width: 100px;
+                        border: 2px solid themed("border");
+                        border-radius: 5px;
+                    }
+                    h5 {
+                        cursor: pointer;
+                        font-weight: bold;
+                        font-size: 16px;
+                        &:hover {
+                            color: #40ca85;
+                        }
+                    }
+                }
+                .related-posts {
+                    padding: 50px 0px;
+                }
+            }
+
+
+        }
+    }
+}

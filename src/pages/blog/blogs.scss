@@ -1,0 +1,21 @@
+@import "../../styles/style.scss";
+.blogs {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+
+    @include themify() {
+        
+        background-color: themed("bg");
+        .title-section {
+            p {
+                color: rgb(168, 168, 168);
+            }
+        }
+        .blog-posts {
+
+        }
+    }
+}

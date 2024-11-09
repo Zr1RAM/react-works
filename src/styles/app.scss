@@ -1,0 +1,11 @@
+@import './style.scss';
+.main-bg {
+    @include themify() {
+    background-color: themed("bgSoft");
+    color: themed("textColor");
+    }
+    height: auto;
+    min-height: 100vh;
+    width: 100vw;
+}
+

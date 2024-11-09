@@ -1,0 +1,82 @@
+@import "../../styles/style.scss";
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    top: 0;
+    position: sticky;
+    
+
+    z-index: 999;
+
+    @include themify() {
+        border-bottom: 1px solid themed("border");
+        background-color: themed("bg");
+        color: themed("textColor");
+        .left {
+            display: flex;
+            align-items: center;
+            
+            
+
+            .give-a-star {
+                margin-left: 20px;
+                padding: 5px 10px;
+                background-color: themed("textColor");
+                border-radius: 15px;
+                color: themed("bgSoft");
+                display: flex;
+                align-items: center;
+                
+                .star {
+                    font-size: 16px;
+                }
+
+                span {
+                    margin-left: 5px;
+                    color: themed("bgSoft");
+                    font-size: small;
+                    font-weight: 100;
+                }
+            }
+        }
+
+        .center {
+            a {
+                margin: 0px 15px;
+                text-decoration: inherit;
+                color: themed("textColor");
+            }
+
+            a:hover {
+                color: #40ca85;
+                transition: background-color 0.2s ease;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            .search-icon:hover {
+                // color: #40ca85;
+                cursor: pointer;
+            }
+            button {
+                border-radius: 5px;
+                border: none;
+                color: white;
+                background: linear-gradient(to right, #06976e, #23afc3);
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                
+            }
+        }
+    }
+
+
+
+}

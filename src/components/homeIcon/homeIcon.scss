@@ -1,0 +1,17 @@
+@import "../../styles/style.scss";
+
+.home-icon {
+    display: flex;
+align-items: center;
+    img {
+        height: 45px;
+    }
+    span {
+        font-weight: bold;
+        @include themify() {
+            color: themed("textColor");
+        }
+        font-size: 20px;
+        font-family: 'Inter', sans-serif;
+    }
+}
